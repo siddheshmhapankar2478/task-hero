@@ -1,7 +1,7 @@
 import React, {useCallback} from 'react';
 import {View, Text, Alert} from 'react-native';
-import ScreenWrapper from '../components/ScreenWrapper';
 import Container from '../components/Container';
+import ResponsiveText from '../components/ResponsiveText';
 
 const HomeScreen = () => {
   const fetchData = useCallback(async () => {}, []);
@@ -17,7 +17,7 @@ const HomeScreen = () => {
       handleBackPress={handleBackPress}
       statusBarColor="#F8F8F8">
       <View>
-        <Text>Home Scresen</Text>
+        <ResponsiveText>Home Scresen</ResponsiveText>
       </View>
     </Container>
   );

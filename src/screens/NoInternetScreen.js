@@ -1,10 +1,11 @@
 import {Button, SafeAreaView, StatusBar, StyleSheet, Text} from 'react-native';
+import ResponsiveText from '../components/ResponsiveText';
 
 const NoInternetScreen = ({onRetry}) => {
   return (
     <SafeAreaView style={styles.noInternetScreen}>
       <StatusBar barStyle="dark-content" />
-      <Text>No Internet Connection</Text>
+      <ResponsiveText>No Internet Connection</ResponsiveText>
       <Button title="Retry" onPress={onRetry} />
     </SafeAreaView>
   );

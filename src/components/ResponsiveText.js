@@ -2,7 +2,6 @@ import React from 'react';
 import {Text} from 'react-native';
 import {calcSize} from './Responsive';
 
-// Font weight to Montserrat font mapping
 const fontWeightToFamily = {
   100: 'Montserrat-Thin',
   200: 'Montserrat-ExtraLight',
@@ -16,20 +15,20 @@ const fontWeightToFamily = {
 };
 
 const ResponsiveText = props => {
-  const {children, fontWeight = '400', fontSize = 12, style} = props || {};
+  const {children, weight = '400', size = 12, style, ...rest} = props || {};
 
-  const fontFamily = fontWeightToFamily[fontWeight];
+  const fontFamily = fontWeightToFamily[weight];
 
   return (
     <Text
       style={[
         {
           fontFamily,
-          fontSize: calcSize(fontSize),
+          fontSize: calcSize(size),
         },
         style,
       ]}
-      {...props}>
+      {...rest}>
       {children}
     </Text>
   );
